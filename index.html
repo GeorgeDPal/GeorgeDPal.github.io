@@ -7,49 +7,95 @@
   <title>Debanjan Pal | ML Data Associate | Data Analyst</title>
 
   <script src="https://cdn.tailwindcss.com"></script>
-
   <style>
+  /* ===== GLOBAL ===== */
   body {
-    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-    color: #f1f5f9;
+    background-color: #0f172a; /* deep navy */
+    color: #e5e7eb; /* soft light gray */
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 
+                 "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
-  /* Soft floating gradient accents */
-  .glow {
-    background:
-      radial-gradient(circle at 15% 20%, rgba(99,102,241,0.25), transparent 40%),
-      radial-gradient(circle at 85% 80%, rgba(56,189,248,0.25), transparent 40%);
+  h1, h2, h3, h4 {
+    color: #ffffff;
+    letter-spacing: -0.02em;
   }
 
-  .github-card {
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(16px);
-    border: 1px solid rgba(255,255,255,0.08);
-    box-shadow: 0 8px 30px rgba(0,0,0,0.3);
-  }
-
+  /* ===== HEADER BORDER ===== */
   .github-border {
-    border-color: rgba(255,255,255,0.08);
+    border-color: #1e293b;
   }
 
-  .accent {
-    color: #818cf8;
-  }
-
-  .hover-card {
+  /* ===== CARD STYLE ===== */
+  .github-card {
+    background-color: #111827; /* solid dark card */
+    border: 1px solid #1f2937;
+    border-radius: 14px;
     transition: all 0.3s ease;
   }
 
-  .hover-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 15px 40px rgba(99,102,241,0.35);
-    border-color: #818cf8;
+  .github-card:hover {
+    border-color: #3b82f6;
+    box-shadow: 0 10px 35px rgba(59,130,246,0.25);
+    transform: translateY(-4px);
   }
 
+  /* ===== ACCENT COLOR ===== */
+  .accent {
+    color: #3b82f6; /* modern blue */
+  }
+
+  /* ===== BUTTON IMPROVEMENT ===== */
+  .accent-bg {
+    background-color: #2563eb;
+  }
+
+  .accent-bg:hover {
+    background-color: #1d4ed8;
+  }
+
+  /* ===== MUTED TEXT FIX ===== */
+  .text-gray-400 {
+    color: #9ca3af !important;
+  }
+
+  .text-gray-500 {
+    color: #9ca3af !important;
+  }
+
+  /* ===== HERO GLOW ===== */
+  .glow {
+    background:
+      radial-gradient(circle at 20% 20%, rgba(59,130,246,0.15), transparent 40%),
+      radial-gradient(circle at 80% 80%, rgba(37,99,235,0.15), transparent 40%);
+  }
+
+  /* ===== LINK HOVER ===== */
   a {
-    transition: all 0.2s ease;
+    transition: color 0.2s ease, border-color 0.2s ease;
+  }
+
+  /* ===== SCROLLBAR (Optional Premium Touch) ===== */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #0f172a;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #1f2937;
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #3b82f6;
   }
 </style>
+
 </head>
 
 <body class="min-h-screen glow">
