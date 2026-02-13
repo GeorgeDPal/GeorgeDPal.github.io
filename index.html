@@ -1,175 +1,203 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Portfolio of Debanjan Pal — Data Analyst | AWS Enthusiast | Python Developer" />
-  <title>Debanjan Pal — Data Analyst | AWS Enthusiast | Python Developer</title>
+  <meta name="description" content="Debanjan Pal | Machine Learning Data Associate II | Data Analyst | AWS | SQL | Python | FAANG-Level Portfolio" />
+  <title>Debanjan Pal | ML Data Associate | Data Analyst</title>
+
   <script src="https://cdn.tailwindcss.com"></script>
+
   <script>
-    tailwind.config = { darkMode: 'class' };
+    tailwind.config = { darkMode: 'class' }
   </script>
+
   <style>
-    .bg-hero { background: linear-gradient(135deg,#eef2ff 0%,#fff1f2 100%); }
-    .card-hover:hover { transform: translateY(-6px); box-shadow: 0 10px 25px rgba(16,24,40,0.08); }
-    .dark .bg-hero { background: linear-gradient(135deg,#1e293b 0%,#0f172a 100%); color:#f8fafc; }
+    body {
+      background: linear-gradient(-45deg, #6366f1, #8b5cf6, #06b6d4, #3b82f6);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .glass {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+    }
+
+    .glass-dark {
+      background: rgba(17, 25, 40, 0.75);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
   </style>
 </head>
 
-<body class="min-h-screen bg-gray-50 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300">
-  <!-- HEADER -->
-  <header class="bg-white/80 dark:bg-gray-800/80 backdrop-blur sticky top-0 z-30 shadow-sm">
-    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-      <div class="flex items-center gap-4">
-        <img src="src/1680511870882.jpeg" alt="Debanjan Pal" class="w-20 h-20 rounded-full border-4 border-indigo-500 object-cover" />
+<body class="text-white min-h-screen">
+
+<!-- HEADER -->
+<header class="fixed w-full z-50 glass px-6 py-4">
+  <div class="max-w-6xl mx-auto flex justify-between items-center">
+    <div class="flex items-center gap-4">
+      <img src="src/1680511870882.jpeg" 
+           class="w-16 h-16 rounded-full border-2 border-white shadow-lg object-cover" />
+      <div>
+        <h1 class="font-bold text-lg">Debanjan Pal</h1>
+        <p class="text-sm text-gray-200">Machine Learning Data Associate II | Data Analyst</p>
+      </div>
+    </div>
+    <div class="flex gap-4 text-sm">
+      <a href="#experience" class="hover:text-indigo-300 transition">Experience</a>
+      <a href="#skills" class="hover:text-indigo-300 transition">Skills</a>
+      <a href="#contact" class="hover:text-indigo-300 transition">Contact</a>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="h-screen flex items-center justify-center text-center px-6">
+  <div>
+    <h2 class="text-4xl md:text-6xl font-extrabold leading-tight">
+      Transforming Data into <span class="text-indigo-300">Scalable Intelligence</span>
+    </h2>
+    <p class="mt-6 max-w-2xl mx-auto text-lg text-gray-200">
+      1+ year experience at Amazon driving ML model accuracy, fraud detection,
+      financial reconciliation, and large-scale data validation across global marketplaces.
+    </p>
+    <div class="mt-8 flex justify-center gap-4">
+      <a href="resume/Debanjan%20Pal.pdf" target="_blank"
+         class="px-6 py-3 bg-white text-indigo-700 font-semibold rounded-full shadow-lg hover:scale-105 transition">
+        View Resume
+      </a>
+      <a href="https://github.com/GeorgeDPal" target="_blank"
+         class="px-6 py-3 border border-white rounded-full hover:bg-white hover:text-indigo-700 transition">
+        GitHub
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience" class="py-24 px-6">
+  <div class="max-w-5xl mx-auto space-y-12">
+
+    <h2 class="text-3xl font-bold text-center">Professional Experience</h2>
+
+    <!-- AMAZON -->
+    <div class="glass p-8 rounded-3xl shadow-xl hover:scale-[1.02] transition duration-500">
+
+      <h3 class="text-2xl font-bold text-indigo-300">Amazon</h3>
+      <p class="text-sm text-gray-300">Full-time · Hyderabad · 1 yr 1 mo</p>
+
+      <div class="mt-8 space-y-10">
+
         <div>
-          <a href="#about" class="text-xl font-bold leading-none">Debanjan Pal</a>
-          <div class="text-sm text-gray-500 dark:text-gray-300">Data Analyst | AWS Enthusiast | Python Developer</div>
-        </div>
-      </div>
-      <div class="flex gap-3 items-center">
-        <a href="resume/Debanjan%20Pal.pdf" target="_blank" class="px-3 py-1 bg-white dark:bg-gray-700 border rounded text-sm">📄 Resume</a>
-        <button id="theme-toggle" class="px-3 py-1 rounded text-sm bg-indigo-600 text-white">Toggle Dark Mode</button>
-      </div>
-    </div>
-  </header>
-
-  <!-- MAIN CONTENT -->
-  <main class="max-w-5xl mx-auto px-6 py-10 space-y-12">
-    <!-- ABOUT -->
-    <section id="about" class="bg-hero p-8 rounded-lg shadow-sm">
-      <h1 class="text-3xl md:text-4xl font-extrabold">👋 Hey there, I'm Debanjan Pal</h1>
-      <p class="mt-3 text-lg">🚀 <strong>Data Analyst | AWS Enthusiast | Python Developer</strong></p>
-      <p class="mt-4">I’m a <strong>data analyst passionate about transforming raw data into meaningful insights</strong>. With strong command over <strong>Python</strong> and libraries like <strong>NumPy</strong> and <strong>Pandas</strong>, I love solving complex data problems, automating workflows, and building data-driven solutions.</p>
-      <p class="mt-3">I also have <strong>hands-on experience designing batch data pipelines using AWS</strong>, working with services such as <strong>S3, Lambda, Glue, and Redshift</strong> to ensure seamless data processing at scale.</p>
-      <p class="mt-3">I believe in <strong>continuous learning and upskilling</strong> — always exploring new technologies in analytics, automation, and cloud engineering to stay ahead in this ever-evolving data world.</p>
-    </section>
-
-    <!-- PROJECTS -->
-    <section id="projects">
-      <h2 class="text-2xl font-bold">🚀 Highlight Projects</h2>
-      <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div class="p-5 bg-white dark:bg-gray-800 rounded-lg shadow-sm card-hover">
-          <h3 class="font-semibold">End-to-End AWS Data Warehouse (Medallion Architecture)</h3>
-          <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">Serverless data warehouse solution using S3, Glue, Lambda, and Redshift Serverless for scalable analytics and transformation.</p>
-          <a href="https://github.com/GeorgeDPal/aws-datawarehouse-solution" target="_blank" class="inline-block mt-3 px-4 py-2 text-sm bg-indigo-600 text-white rounded">View Repository</a>
-        </div>
-        <div class="p-5 bg-white dark:bg-gray-800 rounded-lg shadow-sm card-hover">
-          <h3 class="font-semibold">Document Q&A — RAG Solution using AWS Bedrock</h3>
-          <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">Built a Retrieval-Augmented Generation (RAG) pipeline using Amazon Bedrock, OpenSearch, and Lambda for document-based Q&A.</p>
-          <a href="https://github.com/GeorgeDPal/Document-QA-RAG-Solution-AWS-Bedrock" target="_blank" class="inline-block mt-3 px-4 py-2 text-sm bg-indigo-600 text-white rounded">View Repository</a>
-        </div>
-        <div class="p-5 bg-white dark:bg-gray-800 rounded-lg shadow-sm card-hover">
-          <h3 class="font-semibold">Amazon Purchase Behavior & Sentiment Analysis</h3>
-          <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">Analyzed customer purchase and sentiment trends from Amazon reviews using SQL and Python for insights into customer behavior.</p>
-          <a href="https://github.com/GeorgeDPal/amazon-purchase-behavior-and-sentiment-analysis" target="_blank" class="inline-block mt-3 px-4 py-2 text-sm bg-indigo-600 text-white rounded">View Repository</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- EXPERIENCE -->
-    <section id="experience">
-      <h2 class="text-2xl font-bold">💼 Professional Experience</h2>
-      <div class="mt-4 space-y-6">
-        <div class="bg-white dark:bg-gray-800 p-5 rounded shadow-sm">
-          <h3 class="font-semibold text-lg">🏢 Amazon</h3>
-          <p class="text-sm text-gray-500 dark:text-gray-400">ML Data Associate II | Investigation Specialist | Defect Prevention & Reconciliation (DP&R) | FBA | Support Ops</p>
-          <ul class="list-disc ml-5 mt-3 space-y-1 text-sm">
-            <li>Worked across <strong>North America, Japan, and Europe</strong> marketplaces.</li>
-            <li>Supported <strong>machine learning data operations</strong>, <strong>investigations</strong>, and <strong>proactive dispute cost audits</strong>.</li>
-            <li>Improved <strong>ML model accuracy</strong> and enhanced operational efficiency through process automation.</li>
+          <h4 class="font-semibold text-lg">Machine Learning Data Associate II — FBA, DP&R</h4>
+          <p class="text-sm text-gray-300">May 2024 – Nov 2024</p>
+          <ul class="mt-3 list-disc ml-6 space-y-2 text-sm text-gray-200">
+            <li>Processed 500+ seller disputes monthly using root cause analytics.</li>
+            <li>Improved ML model accuracy by 12% through structured annotation feedback.</li>
+            <li>Maintained 98% SLA compliance across NA & EU marketplaces.</li>
+            <li>Reduced manual rework by 15% via defect pattern identification.</li>
           </ul>
         </div>
 
-        <div class="bg-white dark:bg-gray-800 p-5 rounded shadow-sm">
-          <h3 class="font-semibold text-lg">💡 QSpiders (A Unit of TestYantra Software Solutions)</h3>
-          <p class="text-sm text-gray-500 dark:text-gray-400">Engineer Trainee — Data Analysis Domain</p>
-          <ul class="list-disc ml-5 mt-3 space-y-1 text-sm">
-            <li>Analyzed and visualized real-world business data using <strong>Python</strong> and <strong>SQL</strong>.</li>
-            <li>Built analytical reports and dashboards to communicate insights effectively.</li>
-            <li>Strengthened foundation in <strong>data analytics, reporting, and process improvement</strong>.</li>
+        <div>
+          <h4 class="font-semibold text-lg">Investigation Specialist I — FBA, DP&R</h4>
+          <p class="text-sm text-gray-300">Nov 2024 – Jan 2025</p>
+          <ul class="mt-3 list-disc ml-6 space-y-2 text-sm text-gray-200">
+            <li>Investigated 400+ shipment disputes validating POD & invoices.</li>
+            <li>Overrode 18% inaccurate ML root cause predictions.</li>
+            <li>Reconciled $250K+ in seller reimbursements.</li>
+            <li>Enhanced ML datasets improving automation precision.</li>
           </ul>
         </div>
-      </div>
-    </section>
 
-    <!-- SKILLS -->
-    <section id="skills">
-      <h2 class="text-2xl font-bold">🧰 Technical Skills</h2>
-      <div class="overflow-x-auto mt-4">
-        <table class="min-w-full text-sm border dark:border-gray-700">
-          <thead class="bg-indigo-100 dark:bg-indigo-900 text-gray-800 dark:text-gray-100">
-            <tr><th class="p-3 text-left">Category</th><th class="p-3 text-left">Tools & Technologies</th></tr>
-          </thead>
-          <tbody class="bg-white dark:bg-gray-800">
-            <tr><td class="p-3 font-medium">Programming & Analysis</td><td class="p-3">Python, NumPy, Pandas, SQL</td></tr>
-            <tr><td class="p-3 font-medium">Cloud & Data Engineering</td><td class="p-3">AWS (S3, Lambda, Glue, Redshift, CloudWatch, EventBridge)</td></tr>
-            <tr><td class="p-3 font-medium">Data Visualization</td><td class="p-3">Amazon QuickSight, Power BI, Excel (VLOOKUP, Pivot Tables, Charts)</td></tr>
-            <tr><td class="p-3 font-medium">Generative AI</td><td class="p-3">AWS Bedrock, OpenAI, Vector Embeddings, RAG, Prompt Engineering</td></tr>
-            <tr><td class="p-3 font-medium">Soft Skills</td><td class="p-3">Problem Solving, Analytical Thinking, Collaboration</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
+        <div>
+          <h4 class="font-semibold text-lg">Proactive Dispute Cost Auditor — FBA, Credit Ops</h4>
+          <p class="text-sm text-gray-300">Feb 2025 – May 2025</p>
+          <ul class="mt-3 list-disc ml-6 space-y-2 text-sm text-gray-200">
+            <li>Audited 300+ cost disputes detecting invoice discrepancies.</li>
+            <li>Improved turnaround time by 20% during rollout.</li>
+            <li>Maintained 99% financial decision accuracy.</li>
+          </ul>
+        </div>
 
-    <!-- CERTIFICATES -->
-    <section id="certificates">
-      <h2 class="text-2xl font-bold">🏅 Certificates</h2>
-      <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-6">
-        <div class="p-4 bg-white dark:bg-gray-800 rounded-lg shadow-sm">
-          <img src="certificates/aws-skill-builder-bedrock.jpeg" alt="AWS Bedrock Certificate" class="w-full h-48 object-cover rounded" />
-          <h3 class="mt-3 font-semibold text-center">AWS Skill Builder – Bedrock</h3>
-          <a href="certificates/aws-skill-builder-bedrock.jpeg" target="_blank" class="mt-2 block text-center px-3 py-2 bg-indigo-600 text-white rounded">View</a>
-        </div>
-        <div class="p-4 bg-white dark:bg-gray-800 rounded-lg shadow-sm">
-          <embed src="certificates/Data-Warehouse-Solution.pdf" type="application/pdf" class="w-full h-48 rounded" />
-          <h3 class="mt-3 font-semibold text-center">AWS Data Warehouse Solution</h3>
-          <a href="certificates/Data-Warehouse-Solution.pdf" target="_blank" class="mt-2 block text-center px-3 py-2 bg-indigo-600 text-white rounded">View</a>
-        </div>
-        <div class="p-4 bg-white dark:bg-gray-800 rounded-lg shadow-sm">
-          <embed src="certificates/QuickSight.pdf" type="application/pdf" class="w-full h-48 rounded" />
-          <h3 class="mt-3 font-semibold text-center">AWS QuickSight BI Dashboard</h3>
-          <a href="certificates/QuickSight.pdf" target="_blank" class="mt-2 block text-center px-3 py-2 bg-indigo-600 text-white rounded">View</a>
-        </div>
-        <div class="p-4 bg-white dark:bg-gray-800 rounded-lg shadow-sm">
-          <embed src="certificates/Azure-AI-Document-Intelligence.pdf" type="application/pdf" class="w-full h-48 rounded" />
-          <h3 class="mt-3 font-semibold text-center">Microsoft Azure AI – Document Intelligence</h3>
-          <a href="certificates/Azure-AI-Document-Intelligence.pdf" target="_blank" class="mt-2 block text-center px-3 py-2 bg-indigo-600 text-white rounded">View</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact">
-      <h2 class="text-2xl font-bold">📫 Let’s Connect!</h2>
-      <div class="mt-4 grid grid-cols-1 sm:grid-cols-3 gap-4">
-        <a href="mailto:debanjanpal604@gmail.com" class="p-4 border rounded-lg bg-white dark:bg-gray-800 text-center hover:bg-indigo-50 dark:hover:bg-gray-700">📧 Email Me</a>
-        <a href="https://www.linkedin.com/in/debanjanpal7/" target="_blank" class="p-4 border rounded-lg bg-white dark:bg-gray-800 text-center hover:bg-indigo-50 dark:hover:bg-gray-700">💼 LinkedIn</a>
-        <a href="https://github.com/GeorgeDPal" target="_blank" class="p-4 border rounded-lg bg-white dark:bg-gray-800 text-center hover:bg-indigo-50 dark:hover:bg-gray-700">📊 GitHub</a>
-      </div>
-      <blockquote class="mt-6 italic text-gray-500 dark:text-gray-400 border-l-4 border-indigo-600 pl-4">
-        “ Enhancing to be Enriched ” 
-      </blockquote>
-    </section>
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="mt-12 py-6 bg-white/50 dark:bg-gray-800/50">
-    <div class="max-w-6xl mx-auto px-6 text-sm flex items-center justify-between">
-      <div>© <span id="year"></span> Debanjan Pal </div>
-      <div class="flex gap-3">
-        <a href="https://github.com/GeorgeDPal" target="_blank">GitHub</a>
-        <a href="https://www.linkedin.com/in/debanjanpal7/" target="_blank">LinkedIn</a>
       </div>
     </div>
-  </footer>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-    const toggle = document.getElementById('theme-toggle');
-    toggle.addEventListener('click', () => {
-      document.documentElement.classList.toggle('dark');
-    });
-  </script>
+    <!-- AMAZON BUSINESS -->
+    <div class="glass p-8 rounded-3xl shadow-xl hover:scale-[1.02] transition duration-500">
+      <h3 class="text-2xl font-bold text-indigo-300">
+        ML Data Associate II — Amazon Business (Reseller Segmentation)
+      </h3>
+      <p class="text-sm text-gray-300">Dec 2025 – Present · Hyderabad</p>
+
+      <ul class="mt-4 list-disc ml-6 space-y-2 text-sm text-gray-200">
+        <li>Enriched 1,000+ business entities for ML segmentation pipelines.</li>
+        <li>Improved cross-source data accuracy by 15%.</li>
+        <li>Executed SQL lifecycle analysis across large datasets.</li>
+        <li>Delivered labeled datasets supporting Decision Tree & PCA models.</li>
+        <li>Reduced ingestion errors by 18% via advanced Excel QA validation.</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="py-20 px-6">
+  <div class="max-w-5xl mx-auto text-center">
+    <h2 class="text-3xl font-bold mb-10">Technical Skills</h2>
+
+    <div class="grid md:grid-cols-3 gap-8">
+
+      <div class="glass p-6 rounded-2xl">
+        <h3 class="font-semibold text-indigo-300">Programming</h3>
+        <p class="mt-3 text-sm text-gray-200">Python · SQL · Pandas · NumPy</p>
+      </div>
+
+      <div class="glass p-6 rounded-2xl">
+        <h3 class="font-semibold text-indigo-300">Cloud & Data</h3>
+        <p class="mt-3 text-sm text-gray-200">AWS S3 · Lambda · Glue · Redshift · Bedrock</p>
+      </div>
+
+      <div class="glass p-6 rounded-2xl">
+        <h3 class="font-semibold text-indigo-300">Analytics</h3>
+        <p class="mt-3 text-sm text-gray-200">Excel · Power BI · Root Cause Analysis · Fraud Detection</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="py-20 text-center px-6">
+  <h2 class="text-3xl font-bold">Let’s Connect</h2>
+  <p class="mt-4 text-gray-200">Open to Data Analyst | BI opportunities</p>
+
+  <div class="mt-8 flex justify-center gap-6">
+    <a href="mailto:debanjanpal604@gmail.com"
+       class="px-6 py-3 bg-white text-indigo-700 rounded-full font-semibold hover:scale-105 transition">
+       Email
+    </a>
+    <a href="https://www.linkedin.com/in/debanjanpal7/" target="_blank"
+       class="px-6 py-3 border border-white rounded-full hover:bg-white hover:text-indigo-700 transition">
+       LinkedIn
+    </a>
+  </div>
+</section>
+
+<footer class="text-center py-6 text-sm text-gray-200">
+  © <script>document.write(new Date().getFullYear())</script> Debanjan Pal | Premium Tech Portfolio
+</footer>
+
 </body>
 </html>
