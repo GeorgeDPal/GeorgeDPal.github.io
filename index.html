@@ -3,81 +3,85 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Debanjan Pal | Machine Learning Data Associate II | Data Analyst | AWS | SQL | Python | FAANG-Level Portfolio" />
+  <meta name="description" content="Debanjan Pal | Machine Learning Data Associate II | Data Analyst | AWS | SQL | Python" />
   <title>Debanjan Pal | ML Data Associate | Data Analyst</title>
 
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <script>
-    tailwind.config = { darkMode: 'class' }
-  </script>
-
   <style>
     body {
-      background: linear-gradient(-45deg, #6366f1, #8b5cf6, #06b6d4, #3b82f6);
-      background-size: 400% 400%;
-      animation: gradientBG 15s ease infinite;
+      background-color: #0d1117;
+      color: #c9d1d9;
     }
 
-    @keyframes gradientBG {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
+    .github-card {
+      background-color: #161b22;
+      border: 1px solid #30363d;
     }
 
-    .glass {
-      background: rgba(255, 255, 255, 0.08);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      border: 1px solid rgba(255, 255, 255, 0.18);
+    .github-border {
+      border-color: #30363d;
     }
 
-    .glass-dark {
-      background: rgba(17, 25, 40, 0.75);
-      backdrop-filter: blur(16px);
-      border: 1px solid rgba(255, 255, 255, 0.1);
+    .accent {
+      color: #58a6ff;
+    }
+
+    .accent-bg {
+      background-color: #238636;
+    }
+
+    .hover-card:hover {
+      border-color: #58a6ff;
+      transform: translateY(-4px);
+      transition: all 0.3s ease;
+    }
+
+    .glow {
+      background: radial-gradient(circle at 20% 20%, rgba(88,166,255,0.15), transparent 40%);
     }
   </style>
 </head>
 
-<body class="text-white min-h-screen">
+<body class="min-h-screen glow">
 
 <!-- HEADER -->
-<header class="fixed w-full z-50 glass px-6 py-4">
-  <div class="max-w-6xl mx-auto flex justify-between items-center">
+<header class="border-b github-border bg-[#0d1117]/90 backdrop-blur sticky top-0 z-50">
+  <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
     <div class="flex items-center gap-4">
-      <img src="src/1680511870882.jpeg" 
-           class="w-16 h-16 rounded-full border-2 border-white shadow-lg object-cover" />
+      <img src="src/1680511870882.jpeg"
+           class="w-14 h-14 rounded-full border border-[#30363d] object-cover" />
       <div>
-        <h1 class="font-bold text-lg">Debanjan Pal</h1>
-        <p class="text-sm text-gray-200">Machine Learning Data Associate II | Data Analyst</p>
+        <h1 class="font-semibold text-white">Debanjan Pal</h1>
+        <p class="text-sm text-gray-400">Machine Learning Data Associate II | Data Analyst</p>
       </div>
     </div>
-    <div class="flex gap-4 text-sm">
-      <a href="#experience" class="hover:text-indigo-300 transition">Experience</a>
-      <a href="#skills" class="hover:text-indigo-300 transition">Skills</a>
-      <a href="#contact" class="hover:text-indigo-300 transition">Contact</a>
+    <div class="flex gap-6 text-sm text-gray-400">
+      <a href="#experience" class="hover:text-[#58a6ff] transition">Experience</a>
+      <a href="#skills" class="hover:text-[#58a6ff] transition">Skills</a>
+      <a href="#contact" class="hover:text-[#58a6ff] transition">Contact</a>
     </div>
   </div>
 </header>
 
 <!-- HERO -->
-<section class="h-screen flex items-center justify-center text-center px-6">
-  <div>
-    <h2 class="text-4xl md:text-6xl font-extrabold leading-tight">
-      Transforming Data into <span class="text-indigo-300">Scalable Intelligence</span>
+<section class="py-28 px-6 text-center">
+  <div class="max-w-4xl mx-auto">
+    <h2 class="text-4xl md:text-5xl font-bold text-white leading-tight">
+      Building <span class="accent">Data-Driven Systems</span> at Scale
     </h2>
-    <p class="mt-6 max-w-2xl mx-auto text-lg text-gray-200">
-      1+ year experience at Amazon driving ML model accuracy, fraud detection,
-      financial reconciliation, and large-scale data validation across global marketplaces.
+    <p class="mt-6 text-lg text-gray-400">
+      1+ year at Amazon improving ML model accuracy, fraud detection systems,
+      reconciliation workflows, and data quality pipelines across global marketplaces.
     </p>
+
     <div class="mt-8 flex justify-center gap-4">
       <a href="resume/Debanjan%20Pal.pdf" target="_blank"
-         class="px-6 py-3 bg-white text-indigo-700 font-semibold rounded-full shadow-lg hover:scale-105 transition">
+         class="px-6 py-2 rounded-md bg-[#238636] text-white hover:bg-[#2ea043] transition">
         View Resume
       </a>
       <a href="https://github.com/GeorgeDPal" target="_blank"
-         class="px-6 py-3 border border-white rounded-full hover:bg-white hover:text-indigo-700 transition">
+         class="px-6 py-2 rounded-md border border-[#30363d] hover:border-[#58a6ff] hover:text-[#58a6ff] transition">
         GitHub
       </a>
     </div>
@@ -85,47 +89,47 @@
 </section>
 
 <!-- EXPERIENCE -->
-<section id="experience" class="py-24 px-6">
-  <div class="max-w-5xl mx-auto space-y-12">
+<section id="experience" class="py-20 px-6">
+  <div class="max-w-5xl mx-auto space-y-10">
 
-    <h2 class="text-3xl font-bold text-center">Professional Experience</h2>
+    <h2 class="text-3xl font-semibold text-white mb-6">Professional Experience</h2>
 
     <!-- AMAZON -->
-    <div class="glass p-8 rounded-3xl shadow-xl hover:scale-[1.02] transition duration-500">
+    <div class="github-card p-8 rounded-lg hover-card">
 
-      <h3 class="text-2xl font-bold text-indigo-300">Amazon</h3>
-      <p class="text-sm text-gray-300">Full-time · Hyderabad · 1 yr 1 mo</p>
+      <h3 class="text-xl font-semibold text-white">Amazon</h3>
+      <p class="text-sm text-gray-400">Full-time · Hyderabad · 1 yr 1 mo</p>
 
-      <div class="mt-8 space-y-10">
+      <div class="mt-8 space-y-8">
 
         <div>
-          <h4 class="font-semibold text-lg">Machine Learning Data Associate II — FBA, DP&R</h4>
-          <p class="text-sm text-gray-300">May 2024 – Nov 2024</p>
-          <ul class="mt-3 list-disc ml-6 space-y-2 text-sm text-gray-200">
-            <li>Processed 500+ seller disputes monthly using root cause analytics.</li>
+          <h4 class="font-semibold accent">Machine Learning Data Associate II — FBA, DP&R</h4>
+          <p class="text-sm text-gray-400">May 2024 – Nov 2024</p>
+          <ul class="mt-3 list-disc ml-6 space-y-2 text-sm">
+            <li>Processed monthly seller disputes using shipment-level root cause analytics.</li>
             <li>Improved ML model accuracy by 12% through structured annotation feedback.</li>
             <li>Maintained 98% SLA compliance across NA & EU marketplaces.</li>
-            <li>Reduced manual rework by 15% via defect pattern identification.</li>
+            <li>Reduced manual rework by 15% via systemic defect pattern detection.</li>
           </ul>
         </div>
 
         <div>
-          <h4 class="font-semibold text-lg">Investigation Specialist I — FBA, DP&R</h4>
-          <p class="text-sm text-gray-300">Nov 2024 – Jan 2025</p>
-          <ul class="mt-3 list-disc ml-6 space-y-2 text-sm text-gray-200">
-            <li>Investigated 400+ shipment disputes validating POD & invoices.</li>
-            <li>Overrode 18% inaccurate ML root cause predictions.</li>
-            <li>Reconciled $250K+ in seller reimbursements.</li>
-            <li>Enhanced ML datasets improving automation precision.</li>
+          <h4 class="font-semibold accent">Investigation Specialist I — FBA, DP&R</h4>
+          <p class="text-sm text-gray-400">Nov 2024 – Jan 2025</p>
+          <ul class="mt-3 list-disc ml-6 space-y-2 text-sm">
+            <li>Investigated shipment disputes validating POD and invoice records.</li>
+            <li>Overrode 18% inaccurate ML root cause predictions improving precision.</li>
+            <li>Reconciled $250K+ in validated seller reimbursements.</li>
+            <li>Enhanced ML automation via structured feedback loop integration.</li>
           </ul>
         </div>
 
         <div>
-          <h4 class="font-semibold text-lg">Proactive Dispute Cost Auditor — FBA, Credit Ops</h4>
-          <p class="text-sm text-gray-300">Feb 2025 – May 2025</p>
-          <ul class="mt-3 list-disc ml-6 space-y-2 text-sm text-gray-200">
-            <li>Audited 300+ cost disputes detecting invoice discrepancies.</li>
-            <li>Improved turnaround time by 20% during rollout.</li>
+          <h4 class="font-semibold accent">Proactive Dispute Cost Auditor — FBA, Credit Ops</h4>
+          <p class="text-sm text-gray-400">Feb 2025 – May 2025</p>
+          <ul class="mt-3 list-disc ml-6 space-y-2 text-sm">
+            <li>Audited around 2000 proactive cost disputes identifying invoice discrepancies and fraud signals.</li>
+            <li>Improved turnaround time by 20% during pilot rollout phase.</li>
             <li>Maintained 99% financial decision accuracy.</li>
           </ul>
         </div>
@@ -134,18 +138,17 @@
     </div>
 
     <!-- AMAZON BUSINESS -->
-    <div class="glass p-8 rounded-3xl shadow-xl hover:scale-[1.02] transition duration-500">
-      <h3 class="text-2xl font-bold text-indigo-300">
+    <div class="github-card p-8 rounded-lg hover-card">
+      <h3 class="text-xl font-semibold accent">
         ML Data Associate II — Amazon Business (Reseller Segmentation)
       </h3>
-      <p class="text-sm text-gray-300">Dec 2025 – Present · Hyderabad</p>
+      <p class="text-sm text-gray-400">Dec 2025 – Present · Hyderabad</p>
 
-      <ul class="mt-4 list-disc ml-6 space-y-2 text-sm text-gray-200">
-        <li>Enriched 1,000+ business entities for ML segmentation pipelines.</li>
-        <li>Improved cross-source data accuracy by 15%.</li>
-        <li>Executed SQL lifecycle analysis across large datasets.</li>
-        <li>Delivered labeled datasets supporting Decision Tree & PCA models.</li>
-        <li>Reduced ingestion errors by 18% via advanced Excel QA validation.</li>
+      <ul class="mt-4 list-disc ml-6 space-y-2 text-sm">
+        <li>Enriched 3000+ business entities supporting ML-based reseller segmentation models.</li>
+        <li>Improved cross-source data accuracy by 15% through reconciliation workflows.</li>
+        <li>Executed advanced SQL lifecycle analysis across large-scale datasets.</li>
+        <li>Delivered labeled datasets supporting Decision Tree & PCA classification models.</li>
       </ul>
     </div>
 
@@ -154,24 +157,24 @@
 
 <!-- SKILLS -->
 <section id="skills" class="py-20 px-6">
-  <div class="max-w-5xl mx-auto text-center">
-    <h2 class="text-3xl font-bold mb-10">Technical Skills</h2>
+  <div class="max-w-5xl mx-auto">
+    <h2 class="text-3xl font-semibold text-white mb-8">Technical Skills</h2>
 
-    <div class="grid md:grid-cols-3 gap-8">
+    <div class="grid md:grid-cols-3 gap-6">
 
-      <div class="glass p-6 rounded-2xl">
-        <h3 class="font-semibold text-indigo-300">Programming</h3>
-        <p class="mt-3 text-sm text-gray-200">Python · SQL · Pandas · NumPy</p>
+      <div class="github-card p-6 rounded-lg">
+        <h3 class="accent font-semibold">Programming</h3>
+        <p class="mt-3 text-sm text-gray-400">Python · SQL · Pandas · NumPy</p>
       </div>
 
-      <div class="glass p-6 rounded-2xl">
-        <h3 class="font-semibold text-indigo-300">Cloud & Data</h3>
-        <p class="mt-3 text-sm text-gray-200">AWS S3 · Lambda · Glue · Redshift · Bedrock</p>
+      <div class="github-card p-6 rounded-lg">
+        <h3 class="accent font-semibold">Cloud & Data</h3>
+        <p class="mt-3 text-sm text-gray-400">AWS · S3 · Lambda · Glue · Redshift</p>
       </div>
 
-      <div class="glass p-6 rounded-2xl">
-        <h3 class="font-semibold text-indigo-300">Analytics</h3>
-        <p class="mt-3 text-sm text-gray-200">Excel · Power BI · Root Cause Analysis · Fraud Detection</p>
+      <div class="github-card p-6 rounded-lg">
+        <h3 class="accent font-semibold">Analytics</h3>
+        <p class="mt-3 text-sm text-gray-400">Excel · Power BI · Root Cause Analysis · Fraud Detection</p>
       </div>
 
     </div>
@@ -180,23 +183,23 @@
 
 <!-- CONTACT -->
 <section id="contact" class="py-20 text-center px-6">
-  <h2 class="text-3xl font-bold">Let’s Connect</h2>
-  <p class="mt-4 text-gray-200">Open to Data Analyst | BI opportunities</p>
+  <h2 class="text-3xl font-semibold text-white">Let’s Connect</h2>
+  <p class="mt-4 text-gray-400">Open to Data Analyst | ML | BI opportunities</p>
 
-  <div class="mt-8 flex justify-center gap-6">
+  <div class="mt-8 flex justify-center gap-4">
     <a href="mailto:debanjanpal604@gmail.com"
-       class="px-6 py-3 bg-white text-indigo-700 rounded-full font-semibold hover:scale-105 transition">
+       class="px-6 py-2 rounded-md bg-[#238636] text-white hover:bg-[#2ea043] transition">
        Email
     </a>
     <a href="https://www.linkedin.com/in/debanjanpal7/" target="_blank"
-       class="px-6 py-3 border border-white rounded-full hover:bg-white hover:text-indigo-700 transition">
+       class="px-6 py-2 rounded-md border border-[#30363d] hover:border-[#58a6ff] hover:text-[#58a6ff] transition">
        LinkedIn
     </a>
   </div>
 </section>
 
-<footer class="text-center py-6 text-sm text-gray-200">
-  © <script>document.write(new Date().getFullYear())</script> Debanjan Pal | Premium Tech Portfolio
+<footer class="text-center py-6 text-sm text-gray-500 border-t github-border">
+  © <script>document.write(new Date().getFullYear())</script> Debanjan Pal
 </footer>
 
 </body>
