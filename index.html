@@ -1,273 +1,266 @@
 <!doctype html>
 <html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Debanjan Pal | Machine Learning Data Associate II | Data Analyst | AWS | SQL | Python" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Debanjan Pal | Machine Learning Data Associate II | Data Analyst | AWS | SQL | Python">
   <title>Debanjan Pal | ML Data Associate | Data Analyst</title>
 
   <script src="https://cdn.tailwindcss.com"></script>
+  
   <style>
-  /* ===== GLOBAL ===== */
-  body {
-    background-color: #121212; /* deep charcoal / dark background */
-    color: #E0E0E0; /* soft light gray for text */
-    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 
-                 "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
+    /* ===== GLOBAL ===== */
+    body {
+      background-color: #121212; /* dark background */
+      color: #E0E0E0; /* light text */
+      font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
 
-  h1, h2, h3, h4 {
-    color: #FFFFFF; /* bright white headings */
-    letter-spacing: -0.02em;
-  }
+    h1, h2, h3, h4 {
+      color: #FFFFFF;
+      letter-spacing: -0.02em;
+    }
 
-  /* ===== HEADER ===== */
-  header {
-    background-color: #1F1F1F; /* slightly lighter dark for header */
-    border-bottom: 1px solid #2C2C2C;
-    backdrop-filter: blur(8px);
-  }
+    a {
+      color: #2563EB;
+      text-decoration: none;
+      transition: color 0.2s ease, border-color 0.2s ease;
+    }
 
-  .github-border {
-    border-color: #2C2C2C;
-  }
+    a:hover {
+      color: #1E40AF;
+    }
 
-  /* ===== CARD STYLE ===== */
-  .github-card {
-    background-color: #1E1E1E; /* dark card */
-    border: 1px solid #2C2C2C;
-    border-radius: 12px;
-    padding: 1.5rem;
-    transition: all 0.2s ease;
-  }
+    /* ===== HEADER ===== */
+    header {
+      background-color: rgba(30,30,30,0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid #1E1E1E;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
 
-  .github-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 20px rgba(37,99,235,0.3); /* subtle blue glow */
-    border-color: #2563EB; /* soft blue accent on hover */
-  }
+    /* ===== CARDS ===== */
+    .card {
+      background: rgba(30,30,30,0.9);
+      border: 1px solid #2C2C2C;
+      border-radius: 16px;
+      padding: 1.5rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    }
 
-  /* ===== ACCENT ===== */
-  .accent {
-    color: #2563EB; /* elegant blue accent */
-  }
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 15px 35px rgba(37,99,235,0.3);
+      border-color: #2563EB;
+    }
 
-  .accent-bg {
-    background-color: #2563EB;
-    color: #FFFFFF;
-    transition: background-color 0.2s ease;
-  }
+    /* ===== BUTTONS ===== */
+    .btn-primary {
+      background-color: #2563EB;
+      color: #FFFFFF;
+      padding: 0.6rem 1.5rem;
+      border-radius: 12px;
+      transition: background-color 0.2s ease, transform 0.2s ease;
+    }
 
-  .accent-bg:hover {
-    background-color: #1E40AF; /* darker blue on hover */
-  }
+    .btn-primary:hover {
+      background-color: #1E40AF;
+      transform: translateY(-2px);
+    }
 
-  /* ===== MUTED TEXT ===== */
-  .text-gray-400 {
-    color: #A0A0A0 !important;
-  }
+    .btn-outline {
+      border: 1px solid #2C2C2C;
+      color: #E0E0E0;
+      padding: 0.6rem 1.5rem;
+      border-radius: 12px;
+      transition: border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+    }
 
-  .text-gray-500 {
-    color: #B0B0B0 !important;
-  }
+    .btn-outline:hover {
+      border-color: #2563EB;
+      color: #2563EB;
+      transform: translateY(-2px);
+    }
 
-  /* ===== LINKS ===== */
-  a {
-    color: #2563EB;
-    text-decoration: none;
-    transition: color 0.2s ease, border-color 0.2s ease;
-  }
+    /* ===== HERO GLOW ===== */
+    .hero {
+      background: radial-gradient(circle at 20% 20%, rgba(37,99,235,0.15), transparent 40%),
+                  radial-gradient(circle at 80% 80%, rgba(37,99,235,0.15), transparent 40%);
+      padding-top: 8rem;
+      padding-bottom: 8rem;
+      text-align: center;
+    }
 
-  a:hover {
-    color: #1E40AF;
-  }
+    /* ===== GRID & SECTIONS ===== */
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
 
-  /* ===== HERO / SECTIONS ===== */
-  .glow {
-    background-color: #121212; /* solid dark hero */
-  }
+    .section {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 5rem 1.5rem;
+    }
 
-  /* ===== SCROLLBAR ===== */
-  ::-webkit-scrollbar {
-    width: 8px;
-  }
+    .text-muted {
+      color: #A0A0A0;
+    }
 
-  ::-webkit-scrollbar-track {
-    background: #121212;
-  }
+    /* ===== FOOTER ===== */
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      color: #A0A0A0;
+      border-top: 1px solid #2C2C2C;
+    }
 
-  ::-webkit-scrollbar-thumb {
-    background: #2C2C2C;
-    border-radius: 8px;
-  }
-
-  ::-webkit-scrollbar-thumb:hover {
-    background: #2563EB; /* blue highlight on hover */
-  }
-</style>
-
+    /* ===== SCROLLBAR ===== */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #121212;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #2C2C2C;
+      border-radius: 10px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #2563EB;
+    }
+  </style>
 </head>
 
-<body class="min-h-screen glow">
+<body>
 
 <!-- HEADER -->
-<header class="border-b github-border bg-[#0d1117]/90 backdrop-blur sticky top-0 z-50">
+<header>
   <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
     <div class="flex items-center gap-4">
-      <img src="src/1680511870882.jpeg"
-           class="w-14 h-14 rounded-full border border-[#30363d] object-cover" />
+      <img src="src/1680511870882.jpeg" alt="Debanjan Pal"
+           class="w-14 h-14 rounded-full border border-[#2C2C2C] object-cover" />
       <div>
-        <h1 class="font-semibold text-white">Debanjan Pal</h1>
-        <p class="text-sm text-gray-400">Machine Learning Data Associate II | Data Analyst</p>
+        <h1 class="font-semibold">Debanjan Pal</h1>
+        <p class="text-muted text-sm">ML Data Associate II | Data Analyst</p>
       </div>
     </div>
-    <div class="flex gap-6 text-sm text-gray-400">
-      <a href="#experience" class="hover:text-[#58a6ff] transition">Experience</a>
-      <a href="#skills" class="hover:text-[#58a6ff] transition">Skills</a>
-      <a href="#contact" class="hover:text-[#58a6ff] transition">Contact</a>
-    </div>
+    <nav class="flex gap-6 text-sm text-muted">
+      <a href="#experience" class="hover:text-[#2563EB] transition">Experience</a>
+      <a href="#skills" class="hover:text-[#2563EB] transition">Skills</a>
+      <a href="#contact" class="hover:text-[#2563EB] transition">Contact</a>
+    </nav>
   </div>
 </header>
 
 <!-- HERO -->
-<section class="py-28 px-6 text-center">
-  <div class="max-w-4xl mx-auto">
-    <h2 class="text-4xl md:text-5xl font-bold text-white leading-tight">
-      Building <span class="accent">Data-Driven Systems</span> at Scale
-    </h2>
-    <p class="mt-6 text-lg text-gray-400">
-      1+ year at Amazon improving ML model accuracy, fraud detection systems,
-      reconciliation workflows, and data quality pipelines across global marketplaces.
-    </p>
-
-    <div class="mt-8 flex justify-center gap-4">
-      <a href="resume/Debanjan%20Pal.pdf" target="_blank"
-         class="px-6 py-2 rounded-md bg-[#238636] text-white hover:bg-[#2ea043] transition">
-        View Resume
-      </a>
-      <a href="https://github.com/GeorgeDPal" target="_blank"
-         class="px-6 py-2 rounded-md border border-[#30363d] hover:border-[#58a6ff] hover:text-[#58a6ff] transition">
-        GitHub
-      </a>
-    </div>
+<section class="hero">
+  <h2 class="text-4xl md:text-5xl font-bold text-white">
+    Building <span class="accent">Data-Driven Systems</span> at Scale
+  </h2>
+  <p class="mt-6 text-lg text-muted max-w-2xl mx-auto">
+    1+ year at Amazon improving ML model accuracy, fraud detection systems, reconciliation workflows, and data quality pipelines across global marketplaces.
+  </p>
+  <div class="mt-8 flex justify-center gap-4">
+    <a href="resume/Debanjan%20Pal.pdf" target="_blank" class="btn-primary">View Resume</a>
+    <a href="https://github.com/GeorgeDPal" target="_blank" class="btn-outline">GitHub</a>
   </div>
 </section>
 
 <!-- EXPERIENCE -->
-<section id="experience" class="py-20 px-6">
-  <div class="max-w-5xl mx-auto space-y-10">
-
-    <h2 class="text-3xl font-semibold text-white mb-6">Professional Experience</h2>
-
-    <!-- AMAZON -->
-    <div class="github-card p-8 rounded-lg hover-card">
-
-      <h3 class="text-xl font-semibold text-white">Amazon</h3>
-      <p class="text-sm text-gray-400">Full-time · Hyderabad · 1 yr 1 mo</p>
-
-      <div class="mt-8 space-y-8">
-
-        <div>
-          <h4 class="font-semibold accent">Machine Learning Data Associate II — FBA, DP&R</h4>
-          <p class="text-sm text-gray-400">May 2024 – Nov 2024</p>
-          <ul class="mt-3 list-disc ml-6 space-y-2 text-sm">
-            <li>Processed monthly seller disputes of both high and low value using shipment-level root cause analytics.</li>
-            <li>Improved ML model accuracy by 12% through structured annotation feedback.</li>
-            <li>Maintained 98% SLA compliance across NA & EU marketplaces.</li>
-            <li>Reduced manual rework by 15% via systemic defect pattern detection.</li>
-          </ul>
-        </div>
-
-        <div>
-          <h4 class="font-semibold accent">Investigation Specialist I — FBA, DP&R</h4>
-          <p class="text-sm text-gray-400">Nov 2024 – Jan 2025</p>
-          <ul class="mt-3 list-disc ml-6 space-y-2 text-sm">
-            <li>Investigated shipment disputes validating POD and invoice records.</li>
-            <li>Overrode 18% inaccurate ML root cause predictions improving precision.</li>
-            <li>Reconciled $250K+ in validated seller reimbursements.</li>
-            <li>Enhanced ML automation via structured feedback loop integration.</li>
-          </ul>
-        </div>
-
-        <div>
-          <h4 class="font-semibold accent">Proactive Dispute Cost Auditor — FBA, Credit Ops</h4>
-          <p class="text-sm text-gray-400">Feb 2025 – May 2025</p>
-          <ul class="mt-3 list-disc ml-6 space-y-2 text-sm">
-            <li>Audited 1K= proactive cost disputes identifying invoice discrepancies and fraud signals.</li>
-            <li>Improved turnaround time by 20% during pilot rollout phase.</li>
-            <li>Maintained 99% financial decision accuracy.</li>
-          </ul>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- AMAZON BUSINESS -->
-    <div class="github-card p-8 rounded-lg hover-card">
-      <h3 class="text-xl font-semibold accent">
-        ML Data Associate II — Amazon Business (Reseller Segmentation)
-      </h3>
-      <p class="text-sm text-gray-400">Dec 2025 – Present · Hyderabad</p>
-
-      <ul class="mt-4 list-disc ml-6 space-y-2 text-sm">
-        <li>Enriched 2000+ business entities supporting ML-based reseller segmentation models.</li>
-        <li>Improved cross-source data accuracy by 15% through reconciliation workflows.</li>
-        <li>Executed SQL lifecycle analysis across large-scale datasets to cross retrieve and validate business info.</li>
-        <li>Delivered labeled datasets supporting Decision Tree & PCA classification models.</li>
-        <li>Reduced ingestion errors by 18% using advanced Excel QA validation techniques.</li>
+<section id="experience" class="section">
+  <h2 class="text-3xl font-semibold text-white mb-10 text-center">Professional Experience</h2>
+  
+  <div class="grid-3">
+    <!-- AMAZON FBA -->
+    <div class="card">
+      <h3 class="text-xl font-semibold mb-1">Amazon</h3>
+      <p class="text-sm text-muted mb-4">Full-time · Hyderabad · 1 yr 1 mo</p>
+      <h4 class="accent font-semibold">Machine Learning Data Associate II — FBA, DP&R</h4>
+      <p class="text-sm text-muted mb-2">May 2024 – Nov 2024</p>
+      <ul class="list-disc ml-5 text-sm space-y-1">
+        <li>Processed 1000+ monthly seller disputes using shipment-level root cause analytics.</li>
+        <li>Improved ML model accuracy by 12% through structured annotation feedback.</li>
+        <li>Maintained 98% SLA compliance across NA & EU marketplaces.</li>
+        <li>Reduced manual rework by 15% via defect pattern detection.</li>
       </ul>
     </div>
 
+    <div class="card">
+      <h4 class="accent font-semibold">Investigation Specialist I — FBA, DP&R</h4>
+      <p class="text-sm text-muted mb-2">Nov 2024 – Jan 2025</p>
+      <ul class="list-disc ml-5 text-sm space-y-1">
+        <li>Validated POD and invoice records for shipment disputes.</li>
+        <li>Corrected 18% inaccurate ML root cause predictions improving precision.</li>
+        <li>Reconciled $250K+ in seller reimbursements.</li>
+        <li>Enhanced ML automation via structured feedback loops.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h4 class="accent font-semibold">Proactive Dispute Cost Auditor — FBA, Credit Ops</h4>
+      <p class="text-sm text-muted mb-2">Feb 2025 – May 2025</p>
+      <ul class="list-disc ml-5 text-sm space-y-1">
+        <li>Audited 1K+ proactive cost disputes identifying discrepancies and fraud signals.</li>
+        <li>Improved turnaround time by 20% during pilot rollout phase.</li>
+        <li>Maintained 99% financial decision accuracy.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- AMAZON BUSINESS -->
+  <div class="grid-3 mt-10">
+    <div class="card">
+      <h3 class="accent font-semibold">ML Data Associate II — Amazon Business</h3>
+      <p class="text-sm text-muted mb-2">Dec 2025 – Present · Hyderabad</p>
+      <ul class="list-disc ml-5 text-sm space-y-1">
+        <li>Enriched 2000+ business entities supporting ML-based reseller segmentation.</li>
+        <li>Improved cross-source data accuracy by 15% through reconciliation workflows.</li>
+        <li>Executed SQL lifecycle analysis on large-scale datasets.</li>
+        <li>Delivered labeled datasets supporting Decision Tree & PCA classification models.</li>
+        <li>Reduced ingestion errors by 18% using advanced Excel QA validation.</li>
+      </ul>
+    </div>
   </div>
 </section>
 
 <!-- SKILLS -->
-<section id="skills" class="py-20 px-6">
-  <div class="max-w-5xl mx-auto">
-    <h2 class="text-3xl font-semibold text-white mb-8">Technical Skills</h2>
-
-    <div class="grid md:grid-cols-3 gap-6">
-
-      <div class="github-card p-6 rounded-lg">
-        <h3 class="accent font-semibold">Programming</h3>
-        <p class="mt-3 text-sm text-gray-400">Python · SQL · Pandas · NumPy</p>
-      </div>
-
-      <div class="github-card p-6 rounded-lg">
-        <h3 class="accent font-semibold">Cloud & Data</h3>
-        <p class="mt-3 text-sm text-gray-400">AWS · S3 · Lambda · Glue · Redshift · Bedrock</p>
-      </div>
-
-      <div class="github-card p-6 rounded-lg">
-        <h3 class="accent font-semibold">Analytics</h3>
-        <p class="mt-3 text-sm text-gray-400">Excel · Power BI · Root Cause Analysis · Fraud Detection</p>
-      </div>
-
+<section id="skills" class="section">
+  <h2 class="text-3xl font-semibold text-white mb-10 text-center">Technical Skills</h2>
+  <div class="grid-3">
+    <div class="card">
+      <h3 class="accent font-semibold mb-2">Programming</h3>
+      <p class="text-sm text-muted">Python · SQL · Pandas · NumPy</p>
+    </div>
+    <div class="card">
+      <h3 class="accent font-semibold mb-2">Cloud & Data</h3>
+      <p class="text-sm text-muted">AWS · S3 · Lambda · Glue · Redshift · Bedrock</p>
+    </div>
+    <div class="card">
+      <h3 class="accent font-semibold mb-2">Analytics</h3>
+      <p class="text-sm text-muted">Excel · Power BI · Root Cause Analysis · Fraud Detection</p>
     </div>
   </div>
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="py-20 text-center px-6">
-  <h2 class="text-3xl font-semibold text-white">Let’s Connect</h2>
-  <p class="mt-4 text-gray-400">Open to Data Analyst | ML | BI opportunities</p>
-
-  <div class="mt-8 flex justify-center gap-4">
-    <a href="mailto:debanjanpal604@gmail.com"
-       class="px-6 py-2 rounded-md bg-[#238636] text-white hover:bg-[#2ea043] transition">
-       Email
-    </a>
-    <a href="https://www.linkedin.com/in/debanjanpal7/" target="_blank"
-       class="px-6 py-2 rounded-md border border-[#30363d] hover:border-[#58a6ff] hover:text-[#58a6ff] transition">
-       LinkedIn
-    </a>
+<section id="contact" class="section text-center">
+  <h2 class="text-3xl font-semibold text-white mb-4">Let’s Connect</h2>
+  <p class="text-muted mb-6">Open to Data Analyst | ML | BI opportunities</p>
+  <div class="flex justify-center gap-4 flex-wrap">
+    <a href="mailto:debanjanpal604@gmail.com" class="btn-primary">Email</a>
+    <a href="https://www.linkedin.com/in/debanjanpal7/" target="_blank" class="btn-outline">LinkedIn</a>
   </div>
 </section>
 
-<footer class="text-center py-6 text-sm text-gray-500 border-t github-border">
+<!-- FOOTER -->
+<footer>
   © <script>document.write(new Date().getFullYear())</script> Debanjan Pal
 </footer>
 
