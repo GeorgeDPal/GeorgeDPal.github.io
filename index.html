@@ -10,89 +10,102 @@
   <style>
   /* ===== GLOBAL ===== */
   body {
-    background-color: #0f172a; /* deep navy */
-    color: #e5e7eb; /* soft light gray */
+    background-color: #FFFFFF; /* crisp white */
+    color: #333333; /* deep charcoal for text */
     font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 
                  "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
 
   h1, h2, h3, h4 {
-    color: #ffffff;
+    color: #333333;
     letter-spacing: -0.02em;
   }
 
-  /* ===== HEADER BORDER ===== */
+  /* ===== HEADER ===== */
+  header {
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #E0E0E0;
+    backdrop-filter: blur(8px);
+  }
+
   .github-border {
-    border-color: #1e293b;
+    border-color: #E0E0E0;
   }
 
   /* ===== CARD STYLE ===== */
   .github-card {
-    background-color: #111827; /* solid dark card */
-    border: 1px solid #1f2937;
-    border-radius: 14px;
-    transition: all 0.3s ease;
+    background-color: #F9F9F9; /* light gray card */
+    border: 1px solid #E0E0E0;
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: all 0.2s ease;
   }
 
   .github-card:hover {
-    border-color: #3b82f6;
-    box-shadow: 0 10px 35px rgba(59,130,246,0.25);
     transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+    border-color: #2563EB; /* soft blue accent */
   }
 
-  /* ===== ACCENT COLOR ===== */
+  /* ===== ACCENT ===== */
   .accent {
-    color: #3b82f6; /* modern blue */
+    color: #2563EB; /* blue accent */
   }
 
-  /* ===== BUTTON IMPROVEMENT ===== */
   .accent-bg {
-    background-color: #2563eb;
+    background-color: #2563EB;
+    color: #FFFFFF;
+    transition: background-color 0.2s ease;
   }
 
   .accent-bg:hover {
-    background-color: #1d4ed8;
+    background-color: #1E40AF; /* darker blue on hover */
   }
 
-  /* ===== MUTED TEXT FIX ===== */
+  /* ===== MUTED TEXT ===== */
   .text-gray-400 {
-    color: #9ca3af !important;
+    color: #666666 !important;
   }
 
   .text-gray-500 {
-    color: #9ca3af !important;
+    color: #777777 !important;
   }
 
-  /* ===== HERO GLOW ===== */
-  .glow {
-    background:
-      radial-gradient(circle at 20% 20%, rgba(59,130,246,0.15), transparent 40%),
-      radial-gradient(circle at 80% 80%, rgba(37,99,235,0.15), transparent 40%);
-  }
-
-  /* ===== LINK HOVER ===== */
+  /* ===== LINKS ===== */
   a {
+    color: #2563EB;
+    text-decoration: none;
     transition: color 0.2s ease, border-color 0.2s ease;
   }
 
-  /* ===== SCROLLBAR (Optional Premium Touch) ===== */
+  a:hover {
+    color: #1E40AF;
+  }
+
+  /* ===== HERO / GLOW ===== */
+  .glow {
+    background-color: #FFFFFF; /* simple, minimal */
+  }
+
+  /* ===== SCROLLBAR (minimal) ===== */
   ::-webkit-scrollbar {
     width: 8px;
   }
 
   ::-webkit-scrollbar-track {
-    background: #0f172a;
+    background: #FFFFFF;
   }
 
   ::-webkit-scrollbar-thumb {
-    background: #1f2937;
-    border-radius: 10px;
+    background: #E0E0E0;
+    border-radius: 8px;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: #3b82f6;
+    background: #C0C0C0;
   }
 </style>
 
